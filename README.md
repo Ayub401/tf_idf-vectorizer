@@ -1,4 +1,5 @@
-# tf_idf-vectorizer
+## tf_idf-vectorizer
+
 In this you can find the tf_idf implementation from scatch.
 <font face='georgia'>
     
@@ -46,26 +47,3 @@ $IDF(t) = \log_{e}\frac{\text{Total  number of documents}} {\text{Number of docu
 Consider a document containing 100 words wherein the word cat appears 3 times. The term frequency (i.e., tf) for cat is then (3 / 100) = 0.03. Now, assume we have 10 million documents and the word cat appears in one thousand of these. Then, the inverse document frequency (i.e., idf) is calculated as log(10,000,000 / 1,000) = 4. Thus, the Tf-idf weight is the product of these quantities: 0.03 * 4 = 0.12.
 </p>
 </font>
-
-## in the following way will be computing the Tfidf_vectorizer. 
-
-<font face='georgia'>
-    <h4><strong>1. Build a TFIDF Vectorizer & compare its results with Sklearn:</strong></h4>
-
-<ul>
-    <li> As a part of this task you will be implementing TFIDF vectorizer on a collection of text documents.</li>
-    <br>
-    <li> You should compare the results of your own implementation of TFIDF vectorizer with that of sklearns implemenation TFIDF vectorizer.</li>
-    <br>
-    <li> Sklearn does few more tweaks in the implementation of its version of TFIDF vectorizer, so to replicate the exact results you would need to add following things to your custom implementation of tfidf vectorizer:
-       <ol>
-        <li> Sklearn has its vocabulary generated from idf sroted in alphabetical order</li>
-        <li> Sklearn formula of idf is different from the standard textbook formula. Here the constant <strong>"1"</strong> is added to the numerator and denominator of the idf as if an extra document was seen containing every term in the collection exactly once, which prevents zero divisions.
-            
- $IDF(t) = 1+\log_{e}\frac{1\text{ }+\text{ Total  number of documents in collection}} {1+\text{Number of documents with term t in it}}.$
-        </li>
-        <li> Sklearn applies L2-normalization on its output matrix.</li>
-        <li> The final output of sklearn tfidf vectorizer is a sparse matrix.</li>
-    </ol>
-    <br>
-  
