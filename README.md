@@ -1,6 +1,6 @@
 ## tf_idf-vectorizer
 
-In this you can find the tf_idf implementation from scatch.
+In this repository you can find the tf_idf implementation from scatch. The code is well docomented so that anyone can understand each and every line of code.
 <font face='georgia'>
     
    <h4><strong>What does tf-idf mean?</strong></h4>
